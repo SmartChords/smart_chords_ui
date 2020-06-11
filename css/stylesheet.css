@@ -1,0 +1,37 @@
+* {
+  margin: 0;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+#main {
+  min-height: 100%;
+  margin-bottom: -102px;
+}
+
+/* #main {
+  overflow: auto;
+  padding-bottom: 300px;
+}
+
+#footer {
+  position: relative;
+  height: 150px;
+  margin-bottom: 0;
+  clear: both;
+  background-color: lightgrey;
+}  */
+
+#main:after {
+  content: "";
+  display: block;
+}
+#footer, #main:after {
+  height: 102px;
+}
+#footer {
+  background: lightgrey;
+}
