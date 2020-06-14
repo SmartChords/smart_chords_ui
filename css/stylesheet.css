@@ -12,18 +12,10 @@ body {
   margin-bottom: -102px;
 }
 
-/* #main {
-  overflow: auto;
-  padding-bottom: 300px;
+.header {
+  background-image: url('../images/music_notes.jpeg');
+  margin-bottom: 0px;
 }
-
-#footer {
-  position: relative;
-  height: 150px;
-  margin-bottom: 0;
-  clear: both;
-  background-color: lightgrey;
-}  */
 
 #main:after {
   content: "";

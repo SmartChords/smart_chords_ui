@@ -18,29 +18,16 @@
       <?php include('includes/navbar.html'); ?>
 
       <div class="container" style="margin-top:30px">
-        <div class="row" style="padding-left: 0px;">
+        <div class="row">
           <div class="col-sm-2"></div>
           <div class="col-sm-8">
-            <h2 class="text-center">Welcome to SmartChords!</h2>
-            <p class="text-center">Short explanation here on what to do </p>
-            <form action="upload.php" method="post" enctype="multipart/form-data">
-              <label for="fileToUpload">Select image to upload:</label>
-              <div class="input-group mb-3">
-                <div class="custom-file">
-                  <input type="file" class="custom-file-input" id="fileToUpload">
-                  <label class="custom-file-label" for="fileToUpload">Choose file</label>
-                </div>
-                <div class="input-group-append">
-                  <span class="input-group-text">Upload</span>
-                </div>
-              </div>
-              <!-- <div class="form-group">
-                <div class="form-control-file">
-                  <input type="file" name="fileToUpload" id="fileToUpload" class="form-control-file">
-                </div>
-                <button type="submit" class="btn btn-sm btn-secondary">Submit</button>
-              </div> -->
-            </form>
+            <h2 class="text-center">Help/Frequently Asked Questions</h2>
+            <ul>
+              <li>Lorem ipsum dolor sit amet consectetur adipiscing elit, quam velit gravida nisi semper condimentum phasellus tellus, massa ligula maecenas egestas morbi lectus. Scelerisque tempus ornare commodo nam non inceptos placerat dapibus ac vestibulum litora, torquent eu taciti magna nec dui est rhoncus facilisis ad.</li>
+              <li> Donec torquent eros porttitor nibh malesuada tincidunt turpis litora ligula primis lacus sociis interdum phasellus, dictumst magnis per pulvinar ridiculus felis ornare potenti accumsan eget vulputate laoreet. Nisl cubilia facilisi posuere convallis in quam quis rhoncus pharetra, duis hendrerit varius fames integer ante dis sapien, potenti ullamcorper ultricies fusce conubia mattis metus senectus.</li>
+              <li>Volutpat lobortis cubilia sodales sem sagittis neque vel nunc phasellus est varius porttitor orci lacus, taciti dignissim donec dictum eu sociis luctus justo magnis integer inceptos mattis.</li>
+              <li>Dui nam neque fusce lacinia proin non netus taciti, pharetra sollicitudin mi blandit eleifend dis faucibus inceptos eget, ultrices tristique lacus dapibus sociosqu egestas cubilia.</li>
+            </ul>
           </div>
           <div class="col-sm-2"></div>
         </div>
