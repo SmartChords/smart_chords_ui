@@ -12,18 +12,10 @@ body {
   margin-bottom: -102px;
 }
 
-/* #main {
-  overflow: auto;
-  padding-bottom: 300px;
+.header {
+  background-image: url('../images/music_notes.jpeg');
+  margin-bottom: 0px;
 }
-
-#footer {
-  position: relative;
-  height: 150px;
-  margin-bottom: 0;
-  clear: both;
-  background-color: lightgrey;
-}  */
 
 #main:after {
   content: "";
@@ -34,4 +26,25 @@ body {
 }
 #footer {
   background: lightgrey;
+}
+
+.loader {
+  border: 16px solid #f3f3f3;
+  border-radius: 50%;
+  border-top: 16px solid darkgrey;
+  width: 120px;
+  height: 120px;
+  -webkit-animation: spin 2s linear infinite; /* Safari */
+  animation: spin 2s linear infinite;
+}
+
+/* Safari */
+@-webkit-keyframes spin {
+  0% { -webkit-transform: rotate(0deg); }
+  100% { -webkit-transform: rotate(360deg); }
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
 }

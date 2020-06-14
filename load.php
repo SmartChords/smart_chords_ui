@@ -18,29 +18,11 @@
       <?php include('includes/navbar.html'); ?>
 
       <div class="container" style="margin-top:30px">
-        <div class="row" style="padding-left: 0px;">
+        <div class="row">
           <div class="col-sm-2"></div>
           <div class="col-sm-8">
-            <h2 class="text-center">Welcome to SmartChords!</h2>
-            <p class="text-center">Short explanation here on what to do </p>
-            <form action="upload.php" method="post" enctype="multipart/form-data">
-              <label for="fileToUpload">Select image to upload:</label>
-              <div class="input-group mb-3">
-                <div class="custom-file">
-                  <input type="file" class="custom-file-input" id="fileToUpload">
-                  <label class="custom-file-label" for="fileToUpload">Choose file</label>
-                </div>
-                <div class="input-group-append">
-                  <span class="input-group-text">Upload</span>
-                </div>
-              </div>
-              <!-- <div class="form-group">
-                <div class="form-control-file">
-                  <input type="file" name="fileToUpload" id="fileToUpload" class="form-control-file">
-                </div>
-                <button type="submit" class="btn btn-sm btn-secondary">Submit</button>
-              </div> -->
-            </form>
+            <div class="loader"></div>
+            <h2 class="text-center">Loading...</h2>
           </div>
           <div class="col-sm-2"></div>
         </div>
