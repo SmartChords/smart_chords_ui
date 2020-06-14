@@ -15,12 +15,12 @@
   <body>
     <div id="main">
       <?php include('includes/header.html'); ?>
-      <?php include('includes/navbar.html'); ?>
 
       <div class="container" style="margin-top:30px">
         <div class="row" style="padding-left: 0px;">
-          <div class="col-sm-2"></div>
-          <div class="col-sm-8">
+          <?php include('includes/navbar.html'); ?>
+          <div class="col-sm-1"></div>
+          <div class="col-sm-6">
             <h2 class="text-center">Welcome to SmartChords!</h2>
             <p class="text-center">Short explanation here on what to do </p>
             <form action="upload.php" method="post" enctype="multipart/form-data">
@@ -42,7 +42,7 @@
               </div> -->
             </form>
           </div>
-          <div class="col-sm-2"></div>
+          <!-- <div class="col-sm-2"></div> -->
         </div>
       </div>
     </div>
