@@ -28,6 +28,10 @@ body {
   background: lightgrey;
 }
 
+.nav-item a {
+  color: black;
+}
+
 .loader {
   border: 16px solid #f3f3f3;
   border-radius: 50%;
