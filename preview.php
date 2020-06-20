@@ -27,6 +27,7 @@
               <p class="text-center">Would you like to transcribe this music?</p>
             </div>
             <div class="row">
+              <!-- add form here with hidden input fields with image data and submit to send data to ML model.  -->
               <a href="" type="button" class="btn btn-sm btn-secondary">Submit</button>
               <a href="index.php" type="button" class="btn btn-sm btn-light">Cancel</button>
             </div>
