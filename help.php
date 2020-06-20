@@ -15,11 +15,10 @@
   <body>
     <div id="main">
       <?php include('includes/header.html'); ?>
-      <?php include('includes/navbar.html'); ?>
-
       <div class="container" style="margin-top:30px">
-        <div class="row">
-          <div class="col-sm-2"></div>
+        <div class="row" style="padding-left: 0px;">
+          <?php include('includes/navbar.html'); ?>
+          <!-- <div class="col-sm-1"></div> -->
           <div class="col-sm-8">
             <h2 class="text-center">Help/Frequently Asked Questions</h2>
             <ul>
@@ -29,7 +28,7 @@
               <li>Dui nam neque fusce lacinia proin non netus taciti, pharetra sollicitudin mi blandit eleifend dis faucibus inceptos eget, ultrices tristique lacus dapibus sociosqu egestas cubilia.</li>
             </ul>
           </div>
-          <div class="col-sm-2"></div>
+          <div class="col-sm-1"></div>
         </div>
       </div>
     </div>
