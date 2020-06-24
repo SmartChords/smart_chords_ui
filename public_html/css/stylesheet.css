@@ -9,11 +9,11 @@ body {
 
 #main {
   min-height: 100%;
-  margin-bottom: -102px;
+  margin-bottom: -82px;
 }
 
 .header {
-  background-image: url('../images/music_notes.jpeg');
+  background-image: url('../img/music_notes.jpeg');
   margin-bottom: 0px;
 }
 
@@ -22,7 +22,7 @@ body {
   display: block;
 }
 #footer, #main:after {
-  height: 102px;
+  height: 82px;
 }
 #footer {
   background: lightgrey;
