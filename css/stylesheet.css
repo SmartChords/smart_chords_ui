@@ -42,12 +42,8 @@ body {
   word-wrap: normal;
 }
 
-.button-row .preview-text {
-  float:left;
-}
-
-.button-row .buttons-list {
-  float:right;
+.preview-text, .buttons-list {
+  padding: 7px;
 }
 
 .loader {
