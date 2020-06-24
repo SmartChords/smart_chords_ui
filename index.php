@@ -24,23 +24,27 @@
             <p class="text-center">Short explanation here on what to do </p>
             <form action="upload.php" method="post" enctype="multipart/form-data">
               <label for="fileToUpload">Select image to upload:</label>
-              <div class="input-group">
-                <div class="custom-file">
-                  <input type="file" name="fileToUpload" id="fileToUpload">
-                  <!-- <input type="file" name="fileToUpload" class="custom-file-input" id="fileToUpload"> -->
-                  <label class="custom-file-label" for="fileToUpload">Choose file</label>
+              <div class="input-group mb-3">
+                <div class="custom-file" id="file-js">
+                  <input type="file" name="fileToUpload" class="custom-file-input" id="fileToUpload">
+                  <label class="text-nowrap custom-file-label" for="inputGroupFile02" id="fileName" aria-describedby="inputGroupFileAddon02">Choose file</label>
                 </div>
                 <div class="input-group-append">
-                  <!-- <input class="btn btn-outline-secondary" type="submit" value="Upload"> -->
-                  <input type="submit" value="Upload" name="submit">
+                  <input type="submit" class="input-group-text" name="submit" value="Upload" id="uploadButton">
                 </div>
               </div>
-              <!-- <div class="form-group">
-                <div class="form-control-file">
-                  <input type="file" name="fileToUpload" id="fileToUpload" class="form-control-file">
-                </div>
-                <button type="submit" class="btn btn-sm btn-secondary">Submit</button>
-              </div> -->
+              <script>
+                const fileInput = document.querySelector('#fileToUpload');
+                fileInput.onchange = () => {
+                  console.log(fileInput.files);
+                  const fileName = document.querySelector('#fileName');
+                  if (fileInput.files.length > 0) {
+                    fileName.innerText = fileInput.files[0].name;
+                  } else {
+                    fileName.innerText = 'Choose file';
+                  }
+                }
+              </script>
             </form>
           </div>
           <!-- <div class="col-sm-2"></div> -->
