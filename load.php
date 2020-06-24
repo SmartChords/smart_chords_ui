@@ -15,13 +15,14 @@
   <body>
     <div id="main">
       <?php include('includes/header.html'); ?>
-      <?php include('includes/navbar.html'); ?>
 
       <div class="container" style="margin-top:30px">
-        <div class="row">
-          <div class="col-sm-2"></div>
-          <div class="col-sm-8">
+        <div class="row" style="padding-left: 0px;">
+          <?php include('includes/navbar.html'); ?>
+          <div class="col-sm-1"></div>
+          <div class="col-sm-6">
             <div class="loader"></div>
+            <div class="h-25 d-inline-block"></div>
             <h2 class="text-center">Loading...</h2>
           </div>
           <div class="col-sm-2"></div>
