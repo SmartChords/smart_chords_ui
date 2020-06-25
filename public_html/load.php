@@ -11,5 +11,5 @@
     <h2 class="text-center">Loading...</h2>
   </div>
   <div class="col-sm-2"></div>
-
+  <script>setTimeout(function(){ window.location.href = "http://localhost/smart_chords_ui/public_html/annotated.php" }, 3000);</script>
 <?php include('../resources/templates/footer.html'); ?>
