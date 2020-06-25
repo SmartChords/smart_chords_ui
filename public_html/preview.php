@@ -15,9 +15,9 @@
         <a href="index.php" type="button" class="btn btn-sm btn-light">Cancel</a>
       </span>
     </div>
-    
-    <div class="row">
-      <img width="500" height="750" src="./img/preview.png">
+
+    <div class="row image-row">
+      <img width="600" height="900" src="./img/uploads/preview.png">
     </div>
   </div>
 <?php include('../resources/templates/footer.html'); ?>

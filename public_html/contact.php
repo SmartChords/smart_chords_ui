@@ -1,16 +1,16 @@
 <?php
   require_once("../resources/config.php");
-
+  require("../resources/FlashMessages.php");
   include('../resources/templates/header.html');
   include('../resources/templates/navbar.html');
+  if (!session_id()) session_start();
 ?>
   <div class="col-sm-1"></div>
   <div class="col-sm-6">
     <h2 class="text-center">Contact Us</h2>
     <p class="text-center">Short explanation here on what to do</p>
     <?php
-    $statusMsg = '';
-    $msgClass = '';
+    $msg = new \Plasticbrain\FlashMessages\FlashMessages();
     if(isset($_POST['submit'])){
         // Get the submitted form data
         $email = $_POST['email'];
@@ -22,9 +22,8 @@
         if(!empty($email) && !empty($name) && !empty($subject) && !empty($message)){
 
             if(filter_var($email, FILTER_VALIDATE_EMAIL) === false){
-                $statusMsg = 'Please enter your valid email.';
-                $msgClass = 'errordiv';
-            }else{
+                $msg->error('Please enter your valid email.');
+            } else {
                 // Recipient email
                 $toEmail = 'angroover@gmail';
                 $emailSubject = 'Contact Request Submitted by '.$name;
@@ -43,23 +42,19 @@
 
                 // Send email
                 if(mail($toEmail,$emailSubject,$htmlContent,$headers)){
-                    $statusMsg = 'Your contact request has been submitted successfully !';
-                    $msgClass = 'succdiv';
+                    $msg->success('Your contact request has been submitted successfully !');
+
                 }else{
-                    $statusMsg = 'Your contact request submission failed, please try again.';
-                    $msgClass = 'errordiv';
+                    $msg->error('Your contact request submission failed, please try again.');
                 }
             }
         }else{
-            $statusMsg = 'Please fill all the fields.';
-            $msgClass = 'errordiv';
+          $msg->error('Please fill all the fields.');
         }
     }
     ?>
     <div class="contactFrm">
-      <?php if(!empty($statusMsg)){ ?>
-          <p class="statusMsg <?php echo !empty($msgClass)?$msgClass:''; ?>"><?php echo $statusMsg; ?></p>
-      <?php } ?>
+      <?php echo $msg->display(); ?>
       <form action="" method="post">
           <h4>Name</h4>
           <input type="text" name="name" placeholder="Your Name" required="">
