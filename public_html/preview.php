@@ -1,6 +1,8 @@
 <?php
   require_once("../resources/config.php");
 
+  if (!session_id()) session_start();
+
   include('../resources/templates/header.html');
   include('../resources/templates/navbar.html');
 ?>
@@ -17,7 +19,7 @@
     </div>
 
     <div class="row image-row">
-      <img width="600" height="900" src="./img/uploads/preview.png">
+      <img src="<?php echo './img/uploads/' . $_SESSION['uploadFileName']; ?>"
     </div>
   </div>
 <?php include('../resources/templates/footer.html'); ?>

@@ -5,10 +5,17 @@ $msg = new \Plasticbrain\FlashMessages\FlashMessages();
 
 if (isset($_POST["submit"])) {
   if (!empty($_FILES["fileToUpload"]["name"])) {
-    $target_dir = "../img/uploads/";
-    $target_file = $target_dir . basename($_FILES["fileToUpload"]["name"]);
+	// Comment here - RTW
+    $target_dir = $_FILES["fileToUpload"]["tmp_name"];
+    $target_file = basename($_FILES["fileToUpload"]["name"]);
+	
     $uploadOk = 1;
     $imageFileType = strtolower(pathinfo($target_file, PATHINFO_EXTENSION));
+	
+	// Comment here - RTW
+	$_SESSION["uploadFileName"] = $target_file;	
+	$fileContents = file_get_contents($target_dir);
+	
     // var_dump($_FILES["fileToUpload"]);
     // var_dump($_POST);
     // var_dump($imageFileType);
@@ -24,7 +31,11 @@ if (isset($_POST["submit"])) {
       $width = $imageInfo[1];
     // Check if image file is a actual image or fake image
       // var_dump($imageInfo);
-      if($width > 400 && $height > 500) {
+      if($width > 400 && $height > 500) {	
+		// Comment here - RTW
+		$previewFile = '../img/uploads/' . $target_file;
+		file_put_contents($previewFile, $fileContents);
+		        
         header('Location: ../preview.php');
         exit();
         echo "Image is large enough!!";
