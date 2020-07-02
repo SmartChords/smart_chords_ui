@@ -5,16 +5,17 @@ $msg = new \Plasticbrain\FlashMessages\FlashMessages();
 
 if (isset($_POST["submit"])) {
   if (!empty($_FILES["fileToUpload"]["name"])) {
-	// Comment here - RTW
-    $target_dir = $_FILES["fileToUpload"]["tmp_name"];
+    // Get the path to the file to be uploaded and the basename of that file.
+    $upload_file = $_FILES["fileToUpload"]["tmp_name"];
     $target_file = basename($_FILES["fileToUpload"]["name"]);
 	
     $uploadOk = 1;
     $imageFileType = strtolower(pathinfo($target_file, PATHINFO_EXTENSION));
 	
-	// Comment here - RTW
+	// Store the filename to a SESSION variable for later retreival.
+	// Get the data contents of that file to be written later.
 	$_SESSION["uploadFileName"] = $target_file;	
-	$fileContents = file_get_contents($target_dir);
+	$fileContents = file_get_contents($upload_file);
 	
     // var_dump($_FILES["fileToUpload"]);
     // var_dump($_POST);
@@ -29,10 +30,11 @@ if (isset($_POST["submit"])) {
     } else {
       $height = $imageInfo[0];
       $width = $imageInfo[1];
-    // Check if image file is a actual image or fake image
+      // Check if image file is a actual image or fake image
       // var_dump($imageInfo);
       if($width > 400 && $height > 500) {	
-		// Comment here - RTW
+        // Set the target pathname and filename to upload the input file.
+        // Use put_contents to write the file to the uploads directory on the server.
 		$previewFile = '../img/uploads/' . $target_file;
 		file_put_contents($previewFile, $fileContents);
 		        

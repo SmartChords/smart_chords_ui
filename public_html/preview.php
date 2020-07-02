@@ -19,6 +19,7 @@
     </div>
 
     <div class="row image-row">
+      <!-- Get the currently stored filename to display to the user for preview. -->
       <img src="<?php echo './img/uploads/' . $_SESSION['uploadFileName']; ?>"
     </div>
   </div>
